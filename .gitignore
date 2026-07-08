@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Scala / sbt
+target/
+project/target/
+project/project/
+.bsp/
+.metals/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Tokens reales / configuración local
+env.sh
+
+# Sistema
+.DS_Store

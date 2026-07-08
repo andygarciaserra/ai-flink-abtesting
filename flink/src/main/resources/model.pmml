@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML version="4.4" xmlns="http://www.dmg.org/PMML-4_4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header copyright="UIMP Big Data practice" description="Binary logistic regression model for silocompro.com A/B testing">
+    <Application name="scikit-learn" version="generated"/>
+  </Header>
+  <DataDictionary numberOfFields="114">
+    <DataField name="age" optype="continuous" dataType="double"/>
+    <DataField name="man" optype="continuous" dataType="integer"/>
+    <DataField name="woman" optype="continuous" dataType="integer"/>
+    <DataField name="cat17" optype="continuous" dataType="integer"/>
+    <DataField name="cat74" optype="continuous" dataType="integer"/>
+    <DataField name="cat42" optype="continuous" dataType="integer"/>
+    <DataField name="cat96" optype="continuous" dataType="integer"/>
+    <DataField name="cat13" optype="continuous" dataType="integer"/>
+    <DataField name="cat16" optype="continuous" dataType="integer"/>
+    <DataField name="cat11" optype="continuous" dataType="integer"/>
+    <DataField name="cat35" optype="continuous" dataType="integer"/>
+    <DataField name="cat60" optype="continuous" dataType="integer"/>
+    <DataField name="cat68" optype="continuous" dataType="integer"/>
+    <DataField name="cat10" optype="continuous" dataType="integer"/>
+    <DataField name="cat37" optype="continuous" dataType="integer"/>
+    <DataField name="u4" optype="continuous" dataType="integer"/>
+    <DataField name="cat29" optype="continuous" dataType="integer"/>
+    <DataField name="cat98" optype="continuous" dataType="integer"/>
+    <DataField name="cat40" optype="continuous" dataType="integer"/>
+    <DataField name="cat46" optype="continuous" dataType="integer"/>
+    <DataField name="cat2" optype="continuous" dataType="integer"/>
+    <DataField name="cat41" optype="continuous" dataType="integer"/>
+    <DataField name="cat44" optype="continuous" dataType="integer"/>
+    <DataField name="cat89" optype="continuous" dataType="integer"/>
+    <DataField name="cat53" optype="continuous" dataType="integer"/>
+    <DataField name="cat23" optype="continuous" dataType="integer"/>
+    <DataField name="cat21" optype="continuous" dataType="integer"/>
+    <DataField name="cat36" optype="continuous" dataType="integer"/>
+    <DataField name="cat8" optype="continuous" dataType="integer"/>
+    <DataField name="cat20" optype="continuous" dataType="integer"/>
+    <DataField name="cat67" optype="continuous" dataType="integer"/>
+    <DataField name="cat4" optype="continuous" dataType="integer"/>
+    <DataField name="cat81" optype="continuous" dataType="integer"/>
+    <DataField name="cat84" optype="continuous" dataType="integer"/>
+    <DataField name="cat27" optype="continuous" dataType="integer"/>
+    <DataField name="cat55" optype="continuous" dataType="integer"/>
+    <DataField name="u9" optype="continuous" dataType="integer"/>
+    <DataField name="cat34" optype="continuous" dataType="integer"/>
+    <DataField name="cat22" optype="continuous" dataType="integer"/>
+    <DataField name="cat71" optype="continuous" dataType="integer"/>
+    <DataField name="cat32" optype="continuous" dataType="integer"/>
+    <DataField name="cat3" optype="continuous" dataType="integer"/>
+    <DataField name="cat43" optype="continuous" dataType="integer"/>
+    <DataField name="cat52" optype="continuous" dataType="integer"/>
+    <DataField name="cat83" optype="continuous" dataType="integer"/>
+    <DataField name="cat7" optype="continuous" dataType="integer"/>
+    <DataField name="cat26" optype="continuous" dataType="integer"/>
+    <DataField name="cat15" optype="continuous" dataType="integer"/>
+    <DataField name="u3" optype="continuous" dataType="integer"/>
+    <DataField name="cat70" optype="continuous" dataType="integer"/>
+    <DataField name="u5" optype="continuous" dataType="integer"/>
+    <DataField name="cat24" optype="continuous" dataType="integer"/>
+    <DataField name="cat49" optype="continuous" dataType="integer"/>
+    <DataField name="cat1" optype="continuous" dataType="integer"/>
+    <DataField name="cat19" optype="continuous" dataType="integer"/>
+    <DataField name="u1" optype="continuous" dataType="integer"/>
+    <DataField name="cat77" optype="continuous" dataType="integer"/>
+    <DataField name="cat72" optype="continuous" dataType="integer"/>
+    <DataField name="cat91" optype="continuous" dataType="integer"/>
+    <DataField name="cat73" optype="continuous" dataType="integer"/>
+    <DataField name="cat57" optype="continuous" dataType="integer"/>
+    <DataField name="cat87" optype="continuous" dataType="integer"/>
+    <DataField name="cat75" optype="continuous" dataType="integer"/>
+    <DataField name="cat54" optype="continuous" dataType="integer"/>
+    <DataField name="cat33" optype="continuous" dataType="integer"/>
+    <DataField name="cat61" optype="continuous" dataType="integer"/>
+    <DataField name="cat59" optype="continuous" dataType="integer"/>
+    <DataField name="cat63" optype="continuous" dataType="integer"/>
+    <DataField name="cat9" optype="continuous" dataType="integer"/>
+    <DataField name="cat99" optype="continuous" dataType="integer"/>
+    <DataField name="cat76" optype="continuous" dataType="integer"/>
+    <DataField name="cat95" optype="continuous" dataType="integer"/>
+    <DataField name="u0" optype="continuous" dataType="integer"/>
+    <DataField name="cat86" optype="continuous" dataType="integer"/>
+    <DataField name="cat97" optype="continuous" dataType="integer"/>
+    <DataField name="cat58" optype="continuous" dataType="integer"/>
+    <DataField name="cat69" optype="continuous" dataType="integer"/>
+    <DataField name="cat88" optype="continuous" dataType="integer"/>
+    <DataField name="cat0" optype="continuous" dataType="integer"/>
+    <DataField name="cat56" optype="continuous" dataType="integer"/>
+    <DataField name="u2" optype="continuous" dataType="integer"/>
+    <DataField name="cat85" optype="continuous" dataType="integer"/>
+    <DataField name="cat25" optype="continuous" dataType="integer"/>
+    <DataField name="cat94" optype="continuous" dataType="integer"/>
+    <DataField name="u6" optype="continuous" dataType="integer"/>
+    <DataField name="cat47" optype="continuous" dataType="integer"/>
+    <DataField name="cat51" optype="continuous" dataType="integer"/>
+    <DataField name="cat80" optype="continuous" dataType="integer"/>
+    <DataField name="cat93" optype="continuous" dataType="integer"/>
+    <DataField name="cat5" optype="continuous" dataType="integer"/>
+    <DataField name="cat18" optype="continuous" dataType="integer"/>
+    <DataField name="cat79" optype="continuous" dataType="integer"/>
+    <DataField name="cat48" optype="continuous" dataType="integer"/>
+    <DataField name="cat78" optype="continuous" dataType="integer"/>
+    <DataField name="cat65" optype="continuous" dataType="integer"/>
+    <DataField name="cat14" optype="continuous" dataType="integer"/>
+    <DataField name="cat50" optype="continuous" dataType="integer"/>
+    <DataField name="cat30" optype="continuous" dataType="integer"/>
+    <DataField name="cat31" optype="continuous" dataType="integer"/>
+    <DataField name="cat92" optype="continuous" dataType="integer"/>
+    <DataField name="cat28" optype="continuous" dataType="integer"/>
+    <DataField name="cat38" optype="continuous" dataType="integer"/>
+    <DataField name="cat64" optype="continuous" dataType="integer"/>
+    <DataField name="cat62" optype="continuous" dataType="integer"/>
+    <DataField name="cat6" optype="continuous" dataType="integer"/>
+    <DataField name="cat39" optype="continuous" dataType="integer"/>
+    <DataField name="cat45" optype="continuous" dataType="integer"/>
+    <DataField name="cat66" optype="continuous" dataType="integer"/>
+    <DataField name="cat12" optype="continuous" dataType="integer"/>
+    <DataField name="cat82" optype="continuous" dataType="integer"/>
+    <DataField name="u7" optype="continuous" dataType="integer"/>
+    <DataField name="u8" optype="continuous" dataType="integer"/>
+    <DataField name="cat90" optype="continuous" dataType="integer"/>
+    <DataField name="label" optype="categorical" dataType="integer">
+      <Value value="0"/>
+      <Value value="1"/>
+    </DataField>
+  </DataDictionary>
+  <RegressionModel modelName="SilocomproLogisticRegression" functionName="classification" algorithmName="logisticRegression" normalizationMethod="logit" targetFieldName="label">
+    <MiningSchema>
+      <MiningField name="age" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="man" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="woman" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat17" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat74" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat42" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat96" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat13" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat16" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat11" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat35" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat60" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat68" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat10" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat37" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u4" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat29" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat98" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat40" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat46" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat2" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat41" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat44" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat89" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat53" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat23" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat21" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat36" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat8" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat20" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat67" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat4" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat81" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat84" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat27" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat55" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u9" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat34" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat22" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat71" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat32" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat3" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat43" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat52" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat83" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat7" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat26" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat15" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u3" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat70" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u5" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat24" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat49" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat1" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat19" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u1" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat77" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat72" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat91" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat73" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat57" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat87" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat75" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat54" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat33" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat61" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat59" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat63" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat9" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat99" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat76" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat95" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u0" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat86" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat97" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat58" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat69" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat88" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat0" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat56" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u2" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat85" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat25" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat94" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u6" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat47" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat51" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat80" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat93" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat5" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat18" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat79" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat48" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat78" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat65" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat14" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat50" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat30" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat31" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat92" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat28" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat38" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat64" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat62" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat6" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat39" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat45" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat66" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat12" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat82" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u7" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="u8" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="cat90" usageType="active" invalidValueTreatment="asMissing"/>
+      <MiningField name="label" usageType="target"/>
+    </MiningSchema>
+    <Output>
+      <OutputField name="probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+      <OutputField name="predicted_label" optype="categorical" dataType="integer" feature="predictedValue"/>
+    </Output>
+    <RegressionTable intercept="-0.6042803225302934" targetCategory="1">
+      <NumericPredictor name="age" coefficient="0.027325449892318186"/>
+      <NumericPredictor name="man" coefficient="0.54233416720198901"/>
+      <NumericPredictor name="woman" coefficient="-1.1462315468798587"/>
+      <NumericPredictor name="cat17" coefficient="0.11449351842190655"/>
+      <NumericPredictor name="cat74" coefficient="0.55371442141140437"/>
+      <NumericPredictor name="cat42" coefficient="-0.06508449409289141"/>
+      <NumericPredictor name="cat96" coefficient="-0.016474577381807756"/>
+      <NumericPredictor name="cat13" coefficient="-0.65501971711526896"/>
+      <NumericPredictor name="cat16" coefficient="-0.91536122971960221"/>
+      <NumericPredictor name="cat11" coefficient="0.065831593870896724"/>
+      <NumericPredictor name="cat35" coefficient="-0.26052679029808873"/>
+      <NumericPredictor name="cat60" coefficient="-0.26658784661708285"/>
+      <NumericPredictor name="cat68" coefficient="-0.40522911794533029"/>
+      <NumericPredictor name="cat10" coefficient="0.077628235758760919"/>
+      <NumericPredictor name="cat37" coefficient="0.25395327778148308"/>
+      <NumericPredictor name="u4" coefficient="-0.0096598078622849477"/>
+      <NumericPredictor name="cat29" coefficient="-0.6722809997622996"/>
+      <NumericPredictor name="cat98" coefficient="-0.36963836036693354"/>
+      <NumericPredictor name="cat40" coefficient="-0.11364754635842994"/>
+      <NumericPredictor name="cat46" coefficient="0.25814952590331186"/>
+      <NumericPredictor name="cat2" coefficient="0.054481379882460261"/>
+      <NumericPredictor name="cat41" coefficient="-0.21736586912288788"/>
+      <NumericPredictor name="cat44" coefficient="0.4028737308816791"/>
+      <NumericPredictor name="cat89" coefficient="-0.57856880778490416"/>
+      <NumericPredictor name="cat53" coefficient="0.65278899060590401"/>
+      <NumericPredictor name="cat23" coefficient="0.071964209725838099"/>
+      <NumericPredictor name="cat21" coefficient="-0.043118004417403044"/>
+      <NumericPredictor name="cat36" coefficient="-0.16513472746177454"/>
+      <NumericPredictor name="cat8" coefficient="0.39914562513018609"/>
+      <NumericPredictor name="cat20" coefficient="-0.18365702659913108"/>
+      <NumericPredictor name="cat67" coefficient="0.32256445246775067"/>
+      <NumericPredictor name="cat4" coefficient="0.43060653730589638"/>
+      <NumericPredictor name="cat81" coefficient="-0.19645061627564336"/>
+      <NumericPredictor name="cat84" coefficient="-0.29476167322692948"/>
+      <NumericPredictor name="cat27" coefficient="0.055573199978079156"/>
+      <NumericPredictor name="cat55" coefficient="-0.18098494792925904"/>
+      <NumericPredictor name="u9" coefficient="-0.0068214008893718939"/>
+      <NumericPredictor name="cat34" coefficient="-0.36439707292295614"/>
+      <NumericPredictor name="cat22" coefficient="-0.31990888029468606"/>
+      <NumericPredictor name="cat71" coefficient="-0.1476339138604488"/>
+      <NumericPredictor name="cat32" coefficient="0.025439526318531271"/>
+      <NumericPredictor name="cat3" coefficient="0.17080448589717487"/>
+      <NumericPredictor name="cat43" coefficient="0.37578352798466158"/>
+      <NumericPredictor name="cat52" coefficient="-0.19459768110109146"/>
+      <NumericPredictor name="cat83" coefficient="-0.62842073954082234"/>
+      <NumericPredictor name="cat7" coefficient="-0.10668485084108084"/>
+      <NumericPredictor name="cat26" coefficient="-0.10610281121427795"/>
+      <NumericPredictor name="cat15" coefficient="0.62451036942552673"/>
+      <NumericPredictor name="u3" coefficient="-0.018849976266298401"/>
+      <NumericPredictor name="cat70" coefficient="0.089686434337370238"/>
+      <NumericPredictor name="u5" coefficient="-0.0050343307186559508"/>
+      <NumericPredictor name="cat24" coefficient="-1.0310812070454252"/>
+      <NumericPredictor name="cat49" coefficient="-0.93433567563877351"/>
+      <NumericPredictor name="cat1" coefficient="-0.40676093829467652"/>
+      <NumericPredictor name="cat19" coefficient="0.18215307302611353"/>
+      <NumericPredictor name="u1" coefficient="0.017284753659751073"/>
+      <NumericPredictor name="cat77" coefficient="0.93224991966049697"/>
+      <NumericPredictor name="cat72" coefficient="0.3963602277838596"/>
+      <NumericPredictor name="cat91" coefficient="-0.2650905652566608"/>
+      <NumericPredictor name="cat73" coefficient="-0.43952532078134904"/>
+      <NumericPredictor name="cat57" coefficient="0.21871906503039071"/>
+      <NumericPredictor name="cat87" coefficient="0.51144021896917446"/>
+      <NumericPredictor name="cat75" coefficient="0.65291779514079873"/>
+      <NumericPredictor name="cat54" coefficient="-0.291796889580279"/>
+      <NumericPredictor name="cat33" coefficient="-1.2059684373309096"/>
+      <NumericPredictor name="cat61" coefficient="0.44730170582511108"/>
+      <NumericPredictor name="cat59" coefficient="0.33051757961914074"/>
+      <NumericPredictor name="cat63" coefficient="0.11310631576089804"/>
+      <NumericPredictor name="cat9" coefficient="-0.080770036191558064"/>
+      <NumericPredictor name="cat99" coefficient="0.55225634577376626"/>
+      <NumericPredictor name="cat76" coefficient="0.12249473759968767"/>
+      <NumericPredictor name="cat95" coefficient="-0.1387218451371596"/>
+      <NumericPredictor name="u0" coefficient="-0.017618563426498576"/>
+      <NumericPredictor name="cat86" coefficient="0.045143359073785028"/>
+      <NumericPredictor name="cat97" coefficient="-0.34296876073213917"/>
+      <NumericPredictor name="cat58" coefficient="-0.2020399669304356"/>
+      <NumericPredictor name="cat69" coefficient="-0.49308851489862648"/>
+      <NumericPredictor name="cat88" coefficient="-0.48641663226659337"/>
+      <NumericPredictor name="cat0" coefficient="0.6469484885693374"/>
+      <NumericPredictor name="cat56" coefficient="0.19192914819489143"/>
+      <NumericPredictor name="u2" coefficient="-0.024997696184434447"/>
+      <NumericPredictor name="cat85" coefficient="0.2178905322190807"/>
+      <NumericPredictor name="cat25" coefficient="0.29914036876096867"/>
+      <NumericPredictor name="cat94" coefficient="0.48233032327717035"/>
+      <NumericPredictor name="u6" coefficient="0.0037047633238202751"/>
+      <NumericPredictor name="cat47" coefficient="-0.81737093901694891"/>
+      <NumericPredictor name="cat51" coefficient="0.44448996211363573"/>
+      <NumericPredictor name="cat80" coefficient="-0.0264270095839296"/>
+      <NumericPredictor name="cat93" coefficient="-0.7812064942250424"/>
+      <NumericPredictor name="cat5" coefficient="-0.21913537205582984"/>
+      <NumericPredictor name="cat18" coefficient="1.2673387261420768"/>
+      <NumericPredictor name="cat79" coefficient="-0.40790277140108977"/>
+      <NumericPredictor name="cat48" coefficient="0.10372794162241754"/>
+      <NumericPredictor name="cat78" coefficient="0.20685253387911845"/>
+      <NumericPredictor name="cat65" coefficient="-0.01545262771083049"/>
+      <NumericPredictor name="cat14" coefficient="0.22082539289760592"/>
+      <NumericPredictor name="cat50" coefficient="0.07955709326359045"/>
+      <NumericPredictor name="cat30" coefficient="0.27048523989094608"/>
+      <NumericPredictor name="cat31" coefficient="-0.10026847727915587"/>
+      <NumericPredictor name="cat92" coefficient="-0.597069295014098"/>
+      <NumericPredictor name="cat28" coefficient="1.9612674613750576"/>
+      <NumericPredictor name="cat38" coefficient="0.14682846041115799"/>
+      <NumericPredictor name="cat64" coefficient="-0.40976315961814175"/>
+      <NumericPredictor name="cat62" coefficient="0.1869510143885349"/>
+      <NumericPredictor name="cat6" coefficient="-0.65592618900707245"/>
+      <NumericPredictor name="cat39" coefficient="0.15043277060459226"/>
+      <NumericPredictor name="cat45" coefficient="-0.035750571790220537"/>
+      <NumericPredictor name="cat66" coefficient="0.91546866456233789"/>
+      <NumericPredictor name="cat12" coefficient="-0.55608336316428042"/>
+      <NumericPredictor name="cat82" coefficient="-0.21698562681867667"/>
+      <NumericPredictor name="u7" coefficient="0.0044456665599580626"/>
+      <NumericPredictor name="u8" coefficient="-0.014165969757600963"/>
+      <NumericPredictor name="cat90" coefficient="-0.10925357009466219"/>
+    </RegressionTable>
+  </RegressionModel>
+</PMML>
