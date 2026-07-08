@@ -364,8 +364,8 @@ Ejemplo de mensaje esperado:
 El experimento final se lanzó con:
 
 ```text
+Student UID: 21701893J
 Experiment UID: ag02
-Threshold: 0.65
 Significance: 0.05
 Power: 0.8
 Sample size: 5678
